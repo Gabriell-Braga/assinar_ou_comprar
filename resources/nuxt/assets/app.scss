@@ -1,0 +1,43 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+
+$theme-colors: (
+  "yellow": #ffdd00,
+  "bitbucket": #205081,
+  "dropbox": #007ee5,
+  "facebook": #3b5999,
+  "flickr": #2BA9E1,
+  "foursquare": #f94877,
+  "github": #444444,
+  "google": #DD4B39,
+  "instagram": #3F729B,
+  "linkedin": #007BB6,
+  "medium": #02b875,
+  "messenger": #0084ff,
+  "microsoft": #2672EC,
+  "pinterest": #CB2027,
+  "reddit": #EFF7FF,
+  "skype": #00AFF0,
+  "slack": #3aaf85,
+  "soundcloud": #ff3300,
+  "tumblr": #CB2027,
+  "twitter": #55ACEE,
+  "vimeo": #1AB7EA,
+  "vk": #587EA3,
+  "whatsapp": #25D366,
+  "wordpress": #21759b,
+  "yahoo": #720E9E,
+  "youtube": #cd201f
+);
+
+@import "~bootstrap/scss/bootstrap";
+
+
+/* Element.io */
+.el-collapse-item__header {padding-left:10px;}
+.el-collapse-item__content {padding-left:10px;}
+
+// Font Awesome 5
+@import url('//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+
+// Animate.css
+@import url('//cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');

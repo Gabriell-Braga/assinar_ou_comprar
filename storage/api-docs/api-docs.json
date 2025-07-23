@@ -1,0 +1,206 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "TEvEP",
+        "description": "API TEvEP",
+        "contact": {
+            "email": "jeferson.i.silva@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/auth/login": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Autenticação",
+                "description": "Autenticação",
+                "operationId": "authLogin",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                }
+            }
+        },
+        "/auth/me": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Dados do usuário logado",
+                "description": "Dados do usuário logado",
+                "operationId": "authMe",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                }
+            }
+        },
+        "/auth/logout": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Sair do sistema",
+                "description": "Sair do sistema",
+                "operationId": "authLogout",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                }
+            }
+        },
+        "/auth/refresh": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Atualiza token",
+                "description": "Atualiza token",
+                "operationId": "authRefresh",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                }
+            }
+        },
+        "/auth/password-token": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Inicia o processo de alteração de senha enviando e-mail com token para usuário",
+                "description": "Inicia o processo de alteração de senha enviando e-mail com token para usuário",
+                "operationId": "authPasswordToken",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                }
+            }
+        },
+        "/auth/password-refresh": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Finaliza processo de alteração de senha recebendo e-mail, token, nova senha e confirmação de nova senha",
+                "description": "Finaliza processo de alteração de senha recebendo e-mail, token, nova senha e confirmação de nova senha",
+                "operationId": "authPasswordRefresh",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                }
+            }
+        },
+        "/user/search": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Buscar usuários",
+                "description": "Buscar usuários",
+                "operationId": "user-search",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                }
+            }
+        },
+        "/user/find/{id}": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Encontrar usuário por ID",
+                "description": "Encontrar usuário por ID",
+                "operationId": "user-find",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                }
+            }
+        },
+        "/user/save": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Salvar dados de usuários",
+                "description": "Salvar dados de usuários",
+                "operationId": "user-save",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                }
+            }
+        },
+        "/user/delete/{id}": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Deletar usuário",
+                "description": "Deletar usuário",
+                "operationId": "user-delete",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Auth",
+            "description": "Autenticação"
+        },
+        {
+            "name": "User",
+            "description": "Endpoints de usuário"
+        }
+    ],
+    "security": [
+        []
+    ]
+}

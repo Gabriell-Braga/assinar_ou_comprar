@@ -1,0 +1,34 @@
+version: '3.5'
+
+services:
+    app-assinar-comprar:
+        build: 
+            context: ./app
+        container_name: app-assinar-comprar
+        ports: 
+            - "80:80"
+            # - "3000:3000"
+            - "9000:9000"
+        volumes: 
+            - ../.:/home/www-data
+        tty: true
+        entrypoint: .docker/app/entrypoint.sh
+        depends_on:
+            - redis-assinar-comprar
+        networks:
+            - app-assinar-comprar
+    
+    redis-assinar-comprar:
+        image: redis:6.2-alpine
+        container_name: redis-assinar-comprar
+        command: redis-server --requirepass Senha123#
+        ports: 
+            - "6379:6379"
+        restart: always
+        tty: true
+        networks:
+            - app-assinar-comprar
+    
+networks:
+  app-assinar-comprar:
+    driver: bridge

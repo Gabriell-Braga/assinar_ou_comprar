@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[92],{642:function(t,n,e){"use strict";e.r(n);var r={props:{rut:{default:function(){return{}}}}},l=e(11),component=Object(l.a)(r,(function(){var t=this.$createElement,n=this._self._c||t;return n("div",[n("pre",[this._v("rut: "+this._s(this.rut))])])}),[],!1,null,null,null);n.default=component.exports}}]);
